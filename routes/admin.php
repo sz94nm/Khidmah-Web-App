@@ -18,7 +18,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.'], fu
 
     /*authenticated*/
     Route::group(['middleware' => ['admin']], function () {
-
+ 
         //dashboard routes
         Route::get('/', 'DashboardController@dashboard')->name('dashboard');//previous dashboard route
         Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
